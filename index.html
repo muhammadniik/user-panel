@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./bootstrap fils/css/bootstrap.rtl.min.css" />
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="./styls/style.css" />
+    <title>user panel</title>
+</head>
+
+<body class="bg-light">
+    <!--------------------------------- navicationbar -->
+    <nav class="navbar navbar-expand-md navbar-light">
+        <button class="navbar-toggler btn btn-primary my-1" type="button" data-toggle="collapse" data-target="#collapseExample">
+        <i class="navbar-toggler-icon text-black"></i>
+      </button>
+        <div class="navbar-collapse collapse" id="collapseExample">
+            <div class="container-fluid">
+                <div class="row">
+                    <!-- right nav -->
+                    <div class="rightNav col col-lg-2 col-md-3 fixed-top text-center myright">
+                        <a href="#" class="text-decoration-none text-white border-bottom d-block py-2">نیک</a
+              >
+              <div class="mt-3 border-bottom pb-3">
+                <a href="">
+                  <img
+                    src="./images/me.jpg"
+                    class="meImge rounded-circle me-2"
+                    alt="#"
+                  />
+                </a>
+                        <a href="" class="text-decoration-none text-white text-muted">
+                  محمد نیک</a
+                >
+              </div>
+              <!-- btn navbar -->
+              <ul
+                class="navbar container-fluid list-unstyled px-0 justify-content-center"
+              >
+                <li class="w-100 px-0 nav-link bg-danger rounded-2 btn-group">
+                  <i class="fa fa-clock text-white" aria-hidden="true"></i>
+
+                  <a class="fw-bold text-white mybtn" href="#">داشبورد</a>
+                        </li>
+                        <li class="w-100 px-0 nav-link">
+                            <i class="fa fa-user text-white" aria-hidden="true"></i>
+
+                            <a class="fw-bold text-white mybtn" href="#">پروفایل</a>
+                        </li>
+                        <li class="w-100 px-0 nav-link">
+                            <i class="fa fa-bell text-white" aria-hidden="true"></i>
+
+                            <a class="fw-bold text-white mybtn" href="#">پیام ها</a>
+                        </li>
+                        <li class="w-100 px-0 nav-link">
+                            <i class="fa fa-home text-white" aria-hidden="true"></i>
+
+                            <a class="fw-bold text-white mybtn" href="#">فروش</a>
+                        </li>
+                        <li class="w-100 px-0 nav-link">
+                            <i class="fa fa-chart-area text-white" aria-hidden="true"></i>
+
+                            <a class="fw-bold text-white mybtn" href="#">تحلیل</a>
+                        </li>
+                        <li class="w-100 px-0 nav-link gro">
+                            <i class="fa fa-skull text-white" aria-hidden="true"></i>
+                            <a class="fw-bold text-white mybtn" href="#">تنظیمات</a>
+                        </li>
+                        </ul>
+                        <!-- end of btn navbar -->
+                    </div>
+                </div>
+            </div>
+            <!-- nav row2 -->
+
+            <!-- navRow 2 -->
+            <!-- end right nav -->
+
+            <div class="bg-dark col col-lg-10 col-md-9 fixed-top py-md-1 mytop" style="margin-right: auto">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <a class="btn px-0" href="">
+                                <span class="text-white">داشبورد</span>
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <form class="form-inline my-2" action="">
+                                <div class="input-group">
+                                    <button class="btn btn-outline-light">
+                      <i class="fa fa-search text-danger"></i>
+                    </button>
+                                    <input class="form-control text-center" placeholder="جستجو..." type="text" />
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="nav navbar">
+                                <button class="navbar-nav btn">
+                    <i class="fa fa-bell text-white"></i>
+                  </button>
+                                <button class="navbar-nav btn">
+                    <i class="fa fa-comment text-white"></i>
+                  </button>
+                                <!-- class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" -->
+                                <button class="navbar-nav btn" data-toggle="modal" data-target="#mymodal" style="margin-right: auto">
+                    <i class="fa fa-sign-out-alt text-danger"></i>
+                  </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Button trigger modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        می خواهید خارج شوید ؟
+                    </h5>
+                </div>
+                <div class="modal-body">
+                    <span>درصورت خروج باید دوباره لاگین کنید.</span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">
+              خیر
+            </button>
+                    <button type="button" class="btn btn-danger">بله</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------------------------- end of modal -->
+
+    <!-- farst card -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-10 col-md-9 mt-md-5" style="margin-right: auto">
+                <div class="row mt-1">
+                    <!-- card1 -->
+                    <div class="col-xl-3 col-md-6 mt-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex align-content-center justify-content-between">
+                                    <div>
+                                        <h5 class="card-title">فروش</h5>
+                                        <p class="card-text">30 میلیون</p>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-chess-bishop text-danger" style="font-size: 60px"></i>
+                                    </div>
+                                </div>
+
+                                <hr />
+                                <a href="#" class="btn btn-primary">به روز رسانی</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of card1 -->
+                    <!-- card1 -->
+                    <div class="col-xl-3 col-md-6 mt-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex align-content-center justify-content-between">
+                                    <div>
+                                        <h5 class="card-title">هزینه</h5>
+                                        <p class="card-text">5 میلیون</p>
+                                    </div>
+                                    <div>
+                                        <i class="fa fa-coins text-success" aria-hidden="true" style="font-size: 60px"></i>
+                                    </div>
+                                </div>
+
+                                <hr />
+                                <a href="#" class="btn btn-primary">به روز رسانی</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of card1 -->
+                    <!-- card1 -->
+                    <div class="col-xl-3 col-md-6 mt-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex align-content-center justify-content-between">
+                                    <div>
+                                        <h5 class="card-title">کاربران</h5>
+                                        <p class="card-text">10,000</p>
+                                    </div>
+                                    <div>
+                                        <i class="fa fa-user text-dark" style="font-size: 60px"></i>
+                                    </div>
+                                </div>
+
+                                <hr />
+                                <a href="#" class="btn btn-primary">به روز رسانی</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of card1 -->
+                    <!-- card1 -->
+                    <div class="col-xl-3 col-md-6 mt-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex align-content-center justify-content-between">
+                                    <div>
+                                        <h5 class="card-title">بازدید</h5>
+                                        <p class="card-text">30,000</p>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-chart-area text-info" style="font-size: 60px"></i>
+                                    </div>
+                                </div>
+
+                                <hr />
+                                <a href="#" class="btn btn-primary">به روز رسانی</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of card1 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of farst card -->
+
+    <!-- progresbar and texts -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-10 col-md-9 mt-3" style="margin-right: auto">
+                <div class="row">
+                    <!-- progresbars -->
+                    <div class="col-lg-6">
+                        <div class="d-flex flex-column bg-dark justify-content-around m-1 p-3" style="height: 400px">
+                            <span class="text-white">پروژه ها</span>
+                            <!-- one pregresbar -->
+                            <div>
+                                <label for="#onepro" class="text-light pb-2">کتابخانه</label>
+                                <div class="progress" id="onepro">
+                                    <div class="progress-bar progress-bar-striped" style="width: 25%">
+                                        25%
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of one pregresbar -->
+                            <!-- one pregresbar -->
+                            <div>
+                                <label for="#onepro" class="text-light pb-2">کتابخانه</label>
+                                <div class="progress" id="onepro">
+                                    <div class="progress-bar progress-bar-striped bg-danger" style="width: 50%">
+                                        50%
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of one pregresbar -->
+                            <!-- one pregresbar -->
+                            <div>
+                                <label for="#onepro" class="text-light pb-2">کتابخانه</label>
+                                <div class="progress" id="onepro">
+                                    <div class="progress-bar progress-bar-striped bg-success" style="width: 25%">
+                                        25%
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end of one pregresbar -->
+                        </div>
+                    </div>
+                    <!-- end of progresbars -->
+
+                    <!-- task -->
+                    <div class="col-lg-6">
+                        <div class="d-flex flex-column justify-content-between m-1 p-3" style="height: 400px">
+                            <span class="text-muted"> تسک ها</span>
+                            <!-- firs task -->
+                            <div class="d-flex bg-white justify-content-between align-content-center p-1 border border-bottom-0 border-end-0 border-top-0 border-2 border-danger">
+                                <input class="form-check-input mt-2" type="checkbox" name="" id="" />
+                                <span>آماده کردن بک اند</span>
+                                <div>
+                                    <button class="btn px-1">
+                      <i class="fa fa-comment text-success"></i>
+                    </button>
+                                    <button class="btn px-1">
+                      <i class="fa fa-trash text-danger"></i>
+                    </button>
+                                </div>
+                            </div>
+                            <!-- end of firs task -->
+                            <!-- firs task -->
+                            <div class="d-flex bg-white justify-content-between align-content-center p-1 border border-bottom-0 border-end-0 border-top-0 border-2 border-danger">
+                                <input class="form-check-input mt-2" type="checkbox" name="" id="" />
+                                <span>آماده کردن بک اند</span>
+                                <div>
+                                    <button class="btn px-1">
+                      <i class="fa fa-comment text-success"></i>
+                    </button>
+                                    <button class="btn px-1">
+                      <i class="fa fa-trash text-danger"></i>
+                    </button>
+                                </div>
+                            </div>
+                            <!-- end of firs task -->
+                            <!-- firs task -->
+                            <div class="d-flex bg-white justify-content-between align-content-center p-1 border border-bottom-0 border-end-0 border-top-0 border-2 border-danger">
+                                <input class="form-check-input mt-2" type="checkbox" name="" id="" />
+                                <span>آماده کردن بک اند</span>
+                                <div>
+                                    <button class="btn px-1">
+                      <i class="fa fa-comment text-success"></i>
+                    </button>
+                                    <button class="btn px-1">
+                      <i class="fa fa-trash text-danger"></i>
+                    </button>
+                                </div>
+                            </div>
+                            <!-- end of firs task -->
+                        </div>
+                    </div>
+                    <!-- end of task -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of progresbar and texts -->
+
+    <!--------------------------- payed and tecets-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-10 col-md-9 mt-md-5" style="margin-right: auto">
+                <div class="row">
+                    <!-- payeds -->
+                    <div class="col-xl-6">
+                        <div class="m-1">
+                            <span class="text-muted d-block text-center h3">پرداختی ها</span
+                >
+
+                <!-- tebels -->
+                <div>
+                  <table class="table table-dark table-bordered table-hover">
+                    <!-- tabel head -->
+                    <thead>
+                      <tr>
+                        <th class="text-center">#</th>
+                        <th class="text-center">نام</th>
+                        <th class="text-center">مبلغ</th>
+                        <th class="text-center">تاریخ</th>
+                        <th class="text-center">وضعیت</th>
+                      </tr>
+                    </thead>
+                    <!-- end of tabel head -->
+
+                    <!-- table body -->
+                    <tbody>
+                      <tr>
+                        <th>1</th>
+                        <td>محمد</td>
+                        <td>5 میلیون</td>
+                        <td>10 تیر</td>
+                        <td class="text-center">
+                          <button class="btn btn-success w-75 mx-1">
+                            پرداخت شده
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>2</th>
+                        <td>رضا</td>
+                        <td>5 میلیون</td>
+                        <td>10 تیر</td>
+                        <td class="text-center">
+                          <button class="btn btn-danger w-75 mx-1">
+                            پرداخت نشده
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>3</th>
+                        <td>محمد</td>
+                        <td>5 میلیون</td>
+                        <td>10 تیر</td>
+                        <td class="text-center">
+                          <button class="btn btn-warning w-75 mx-1">
+                            انتظار...
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>4</th>
+                        <td>محمد</td>
+                        <td>5 میلیون</td>
+                        <td>10 تیر</td>
+                        <td class="text-center">
+                          <button class="btn btn-success w-75 mx-1">
+                            پرداخت شده
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                    <!-- end of table body -->
+                  </table>
+                </div>
+
+                <!-- end of tebels -->
+
+                <!-- pagination box 1 -->
+                <ul class="pagination d-flex justify-content-center">
+                  <li class="page-item">
+                    <a href="#" class="page-link bg-white">قبلی</a>
+                  </li>
+                  <li class="page-item">
+                    <a href="#" class="page-link bg-primary text-white">1</a>
+                  </li>
+                  <li class="page-item">
+                    <a href="#" class="page-link bg-white">2</a>
+                  </li>
+                  <li class="page-item">
+                    <a href="#" class="page-link bg-white">3</a>
+                  </li>
+                  <li class="page-item">
+                    <a href="#" class="page-link bg-white">بعدی</a>
+                  </li>
+                </ul>
+                <!-- end of pagination box 1 -->
+              </div>
+            </div>
+            <!-- end of payeds -->
+
+            <!---------------------- tecets -->
+
+            <div class="col-xl-6">
+              <div class="m-1">
+                <span class="text-muted d-block text-center h3"
+                  >تیکت های اخیر</span
+                >
+
+                <!-- tebels -->
+                <div>
+                  <table
+                    class="table table-border table-striped table-dark table-hover"
+                  >
+                    <!-- tabel head -->
+                    <thead>
+                      <tr>
+                        <th class="text-center">#</th>
+                        <th class="text-center">نام</th>
+
+                        <th class="text-center">تاریخ</th>
+                        <th class="text-center">عملیات</th>
+                      </tr>
+                    </thead>
+                    <!-- end of tabel head -->
+
+                    <!-- table body -->
+                    <tbody>
+                      <tr>
+                        <th>1</th>
+                        <td>محمد</td>
+
+                        <td>10 تیر</td>
+                        <td class="text-center">
+                          <button class="btn btn-primary">پاسخ</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>2</th>
+                        <td>رضا</td>
+
+                        <td>10 تیر</td>
+                        <td class="text-center">
+                          <button class="btn btn-primary">پاسخ</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>3</th>
+                        <td>محمد</td>
+
+                        <td>10 تیر</td>
+                        <td class="text-center">
+                          <button class="btn btn-primary">پاسخ</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>4</th>
+                        <td>محمد</td>
+
+                        <td>10 تیر</td>
+                        <td class="text-center">
+                          <button class="btn btn-primary">پاسخ</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                    <!-- end of table body -->
+                  </table>
+                </div>
+
+                <!-- end of tebels -->
+
+                <!-- pagination box 1 -->
+                <ul class="pagination d-flex justify-content-center">
+                  <li class="page-item">
+                    <a href="#" class="page-link bg-white">قبلی</a>
+                  </li>
+                  <li class="page-item">
+                    <a href="#" class="page-link bg-primary text-white">1</a>
+                  </li>
+                  <li class="page-item">
+                    <a href="#" class="page-link bg-white">2</a>
+                  </li>
+                  <li class="page-item">
+                    <a href="#" class="page-link bg-white">3</a>
+                  </li>
+                  <li class="page-item">
+                    <a href="#" class="page-link bg-white">بعدی</a>
+                  </li>
+                </ul>
+                <!-- end of pagination box 1 -->
+              </div>
+            </div>
+            <!-- end of payeds -->
+            <!---------------------- end of tecets -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---------------------------end of payed and tecets-->
+
+    <!--  storis and newpost -->
+    <section class="container-fluid">
+      <div class="row">
+        <div class="col-lg-10 col-md-9 mt-md-5" style="margin-right: auto">
+          <div class="row">
+            <!-- strrisssssssssssssss -->
+            <div class="col-lg-6">
+              <div class="m-1">
+                <span class="h3 text-muted d-block w-100 text-center"
+                  >گفتگو های اخیر</span
+                >
+
+                <div id="accordion">
+                  <!-- card 1 -->
+                  <div class="card">
+                    <div class="card-header" id="headingOne">
+                      <h5 class="mb-0">
+                        <button
+                          class="btn text-black d-block w-100 d-flex align-content-center"
+                          data-toggle="collapse"
+                          data-target="#collapseOne"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        >
+                          <img
+                            class="rounded-circle border border-dark mx-2"
+                            src="./images/me.jpg"
+                            style="width: 60px"
+                            alt=""
+                          />
+                          <span class="align-self-end">
+                            <span class="text-danger h5 mx-1">محمد</span> یک گفتگو ایجاد کرد...</span>
+                            </button>
+                            </h5>
+
+                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                                    کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این
+                                    صورت می توان امید داشت که تمام
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of card 1 -->
+                    <!-- card 1 -->
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                                <button class="btn text-black d-block w-100 d-flex align-content-center" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                          <img
+                            class="rounded-circle border border-dark mx-2"
+                            src="./images/me.jpg"
+                            style="width: 60px"
+                            alt=""
+                          />
+                          <span class="align-self-end">
+                            <span class="text-danger h5 mx-1">محمد</span> یک
+                            گفتگو ایجاد کرد...</span
+                          >
+                        </button>
+                            </h5>
+
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="card-body">
+                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                                    کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این
+                                    صورت می توان امید داشت که تمام
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of card 1 -->
+                    <!-- card 3 -->
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h5 class="mb-0">
+                                <button class="btn text-black d-block w-100 d-flex align-content-center" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                          <img
+                            class="rounded-circle border border-dark mx-2"
+                            src="./images/me.jpg"
+                            style="width: 60px"
+                            alt=""
+                          />
+                          <span class="align-self-end">
+                            <span class="text-danger h5 mx-1">محمد</span> یک
+                            گفتگو ایجاد کرد...</span
+                          >
+                        </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="card-body">
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                                کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت
+                                می توان امید داشت که تمام
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of card 3 -->
+
+                    <!-- card 3 -->
+                    <div class="card">
+                        <div class="card-header" id="heading4">
+                            <h5 class="mb-0">
+                                <button class="btn text-black d-block w-100 d-flex align-content-center" data-toggle="collapse" data-target="#collapse4" aria-expanded="true" aria-controls="collapseThree">
+                          <img
+                            class="rounded-circle border border-dark mx-2"
+                            src="./images/me.jpg"
+                            style="width: 60px"
+                            alt=""
+                          />
+                          <span class="align-self-end">
+                            <span class="text-danger h5 mx-1">محمد</span> یک
+                            گفتگو ایجاد کرد...</span
+                          >
+                        </button>
+                            </h5>
+                        </div>
+                        <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordion">
+                            <div class="card-body">
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                                کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت
+                                می توان امید داشت که تمام
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of card 3 -->
+
+                    <!-- card 3 -->
+                    <div class="card">
+                        <div class="card-header" id="heading5">
+                            <h5 class="mb-0">
+                                <button class="btn text-black d-block w-100 d-flex align-content-center" data-toggle="collapse" data-target="#collapse5" aria-expanded="true" aria-controls="collapseThree">
+                          <img
+                            class="rounded-circle border border-dark mx-2"
+                            src="./images/me.jpg"
+                            style="width: 60px"
+                            alt=""
+                          />
+                          <span class="align-self-end">
+                            <span class="text-danger h5 mx-1">محمد</span> یک
+                            گفتگو ایجاد کرد...</span
+                          >
+                        </button>
+                            </h5>
+                        </div>
+                        <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordion">
+                            <div class="card-body">
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                                کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت
+                                می توان امید داشت که تمام
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of card 3 -->
+
+                    <!-- card 3 -->
+                    <div class="card">
+                        <div class="card-header" id="heading6">
+                            <h5 class="mb-0">
+                                <button class="btn text-black d-block w-100 d-flex align-content-center" data-toggle="collapse" data-target="#collapse6" aria-expanded="true" aria-controls="collapseThree">
+                          <img
+                            class="rounded-circle border border-dark mx-2"
+                            src="./images/me.jpg"
+                            style="width: 60px"
+                            alt=""
+                          />
+                          <span class="align-self-end">
+                            <span class="text-danger h5 mx-1">محمد</span> یک
+                            گفتگو ایجاد کرد...</span
+                          >
+                        </button>
+                            </h5>
+                        </div>
+                        <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordion">
+                            <div class="card-body">
+                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                                کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت
+                                می توان امید داشت که تمام
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of card 3 -->
+                </div>
+            </div>
+        </div>
+        <!-- end of strrisssssssssssssss -->
+
+        <!-- newPost -->
+        <div class="col-lg-6">
+
+            <div class="m1 bg-white p-2 mt-5">
+                <span class="h3 text-muted d-block w-100 text-center">پست جدید</span>
+                <!-- btns -->
+                <section class="d-flex w-100 flex-row justify-content-center">
+                    <button class="mx-2 border-0 bg-white">
+                  <i class="fas fa-pen text-success"></i>
+                  <span>وضعیت</span>
+                  <button class="mx-2 border-0 bg-white">
+                  <i class="fas fa-camera text-success"></i>
+                  <span>تصویر</span>
+                </button>
+                    <button class="mx-2 border-0 bg-white">
+                  <i class="fas fa-directions text-success"></i>
+                  <span>مکان</span>
+                </button>
+                </section>
+                <!--end of btns -->
+                <!-- inputs -->
+                <section class="d-flex w-100 flex-column justify-content-center my-5">
+                    <input class=" p-2 my-1" type="text" placeholder="یک متن بنویسید...">
+                    <button class="btn btn-success">ارسال</button>
+                </section>
+                <!-- end of inputs -->
+
+                <!-- time -->
+                <section class="d-flex w-100 flex-row justify-content-around ">
+                    <p class="p-3 bg-light d-flex flex-column align-content-center justify-content-center">
+                        <i class="fas fa-calendar h1 display-1 d-block"></i>
+                        <span class="d-block w-100 text-center">دوشنبه 19 مرداد</span>
+                    </p>
+                    <p class="p-3 bg-light d-flex flex-column align-content-center justify-content-center">
+                        <i class="fas fa-clock h1 display-1 d-block"></i>
+                        <span class="d-block w-100 text-center">12:6 </span>
+                    </p>
+                </section>
+                <!-- end of time -->
+            </div>
+        </div>
+        <!--end of newPost -->
+    </div>
+    </div>
+    </div>
+    </section>
+
+    <footer>
+        <div class="col-lg-10 col-md-9 mt-md-5" style="margin-right: auto;">
+            <div class="m-1 bg-white w-100" style="min-height: 100px;">
+                <span class="text-muted d-block w-100 text-center p-3"> ساخته شده  توسط نیک</span>
+            </div>
+        </div>
+    </footer>
+    <!-- end of storis and newpost -->
+    <script src="./javascript/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
+    <script src="./bootstrap fils/js/bootstrap.min.js"></script>
+    <script src="./bootstrap fils/js/js/bootstrap.bundle.min.js"></script>
+    <script src="./javascript/all.min.js"></script>
+</body>
+
+</html>

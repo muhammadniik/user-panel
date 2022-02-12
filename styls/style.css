@@ -1,0 +1,25 @@
+.rightNav {
+    height: 100vh;
+    background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url(../images/back.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: -5px 2px 20px #000;
+}
+
+.meImge {
+    width: 60px;
+}
+
+.mybtn {
+    text-decoration: none;
+}
+
+@media(max-width :768px) {
+    .myright {
+        position: static;
+    }
+    .mytop {
+        position: static;
+    }
+}
